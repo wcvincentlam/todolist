@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Shadows Into Light', cursive;
+    background-image : url(assets/paper.jpg);
+    background-size: 150vh;
+    min-height: 100vh;
+    color:rgb(66, 66, 66)
+}  
+
+header {
+    font-size: 1.5rem;
+}
+
+header, form {
+    display: flex;
+    justify-content: center;
+    min-height: 50 vh;
+}
+
+
+form input, form button {
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
+form button {
+    margin-left:2.1px;
+    color:rgb(0, 181, 0);
+    background-image:url(assets/paper.jpg);
+    height: 100%;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+form button:hover {
+    color : rgb(2, 220, 2);
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+}
+
+.todo-list{
+    list-style: none;
+    min-width: 50%;
+}
+.todo {
+    font-size: 2rem;
+    display: flex;
+    margin: 0.5rem;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    width:10rem;
+    font-size: 1rem;
+    padding:0.6rem;
+    cursor:pointer;
+    
+}
+.select {
+    display: flex;
+    position: relative;
+    margin: 1.1rem;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+/*Adds something behind the selector*/
+.select::after {
+    content: "\25BC"; 
+    position:absolute;
+    background: rgb(0, 181, 0);
+    color: white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.select:hover::after{
+    background: rgb(2, 220, 2);
+    transition: all 0.3s ease;
+}
+
+/*pushes complete and trash button to the right */
+.todo li {
+    flex:1;
+}
+.complete-btn, .trash-btn {
+    margin:0.4rem;
+    padding:0.8rem;
+    border:none;
+    border-radius: 25px;
+    cursor:pointer;
+}
+
+.complete-btn {
+    color : white;
+    background-color:rgb(204, 200, 200);
+}
+.complete-btn:hover {
+    background : rgb(2, 220, 2);
+}
+.complete-btn:click {
+    background:rgb(2, 220, 2);
+}
+
+.trash-btn {
+    color : white;
+    background-color:rgb(204, 200, 200);
+}
+
+.trash-btn:hover {
+    background: rgb(247, 4, 4);
+}
+
+/*Makes the whole button clickable*/
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+
+.complete {
+    color: rgb(175, 174, 174);
+    text-decoration: line-through;
+    opacity: 0.5;
+    
+}
+
+.collapse{
+    transform: translateX(8rem) translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+.completo {
+    background-color:rgb(2, 220, 2);
+}
